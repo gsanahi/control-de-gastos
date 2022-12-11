@@ -41,7 +41,7 @@ h3 {
     
 }
 
-button {
+.agregar-transaccion {
     font-size: 1rem;
     background-color: whitesmoke;
     font-weight: bold;
@@ -52,6 +52,19 @@ button {
 .transaccion {
     display: flex;
     flex-direction: row;
-    padding: 1rem;
+    padding: 0.2rem;
     justify-content: space-between;
+}
+
+.transaccion div {
+    padding: 0.5rem;
+}
+
+.ingresos-egresos {
+    display: flex;
+    flex-direction: row;
+}
+
+.control {
+    padding: 1rem;
 }

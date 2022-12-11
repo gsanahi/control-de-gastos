@@ -13,67 +13,49 @@
     <div class="container">
         <h1 class="center"> Vamos a controlar tus gastos! </h1>
 
-        <div class="ahorro">
-            <table class="control">
-                <tr>
-                    <th>Tu ahorro</th>
-                </tr>
-                <tr>
-                    <th>€ 100</th>
-                </tr>
-            </table>
-        </div>
-        <div class="ingresos-egresos">
-            <table>
-                <tr>
-                    <th>Ingresos</th>
-                    <th>Egresos</th>
-                </tr>
-                <tr>
-                    <th>€ 200</th>
-                    <th>€ 100</th>
-                </tr>
-            </table>
-        </div>
-
         <div>
-            <h2>Historial</h2>
-            <div id="historial">
-                <div class="transaccion">
-                    <div class="importe">€ 50</div>
-                    <div class="concepto">Cine</div>
-                    <div class="acciones">X</div>
+            <div class="ahorro">
+                <div class="control">
+                    <div>Tu ahorro</div>
+                    <div>€ <span id="ahorro">0</span></div>
                 </div>
-                <div class="transaccion">
-                    <div class="importe">€ 50</div>
-                    <div class="concepto">Bar</div>
-                    <div class="acciones">X</div>
+            </div>
+            <div class="ingresos-egresos">
+                <div class="control">
+                    <div>Ingresos</div>
+                    <div>€ <span id="ingresos">0</span></div>
                 </div>
-                <div class="transaccion">
-                    <div class="importe">€ 200</div>
-                    <div class="concepto">Nómina</div>
-                    <div class="acciones">X</div>
+                <div class="control">
+                    <div>Egresos</div>
+                    <div>€ <span id="egresos">0</span></div>
                 </div>
             </div>
         </div>
 
         <div>
-            <h2>Nueva transaccion</h2>
+            <h2>Historial</h2>
+            <div id="historial" />
         </div>
 
         <div>
-            <h3>Concepto</h3>
-            <input id="concepto-transaccion" type="text" />
-        </div>
+            <div>
+                <h2>Nueva transaccion</h2>
+            </div>
 
-        <div>
-            <h3>Importe</h3>
-            <input id="importe-transaccion" type="number"
-                placeholder="introduzca importe, si es gasto, coloque un - adelante" />
-        </div>
+            <div>
+                <h3>Concepto</h3>
+                <input id="concepto-transaccion" type="text" />
+            </div>
 
-        <div>
-            <button onclick="nuevaTransaccion()">Añadir nueva transaccion</button>
+            <div>
+                <h3>Importe</h3>
+                <input id="importe-transaccion" type="number"
+                    placeholder="introduzca importe, si es gasto, coloque un - adelante" />
+            </div>
+
+            <div>
+                <button class="agregar-transaccion" onclick="nuevaTransaccion()">Añadir nueva transaccion</button>
+            </div>
         </div>
 
 
