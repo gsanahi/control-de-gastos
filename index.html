@@ -33,29 +33,29 @@
         </div>
 
         <div>
-            <h2>Historial</h2>
-            <div id="historial" />
-        </div>
-
-        <div>
-            <div>
+            <div class="nueva-transaccion">
                 <h2>Nueva transaccion</h2>
             </div>
 
-            <div>
+            <div class="form-control">
                 <h3>Concepto</h3>
-                <input id="concepto-transaccion" type="text" />
+                <input class="input-transacion" id="concepto-transaccion" type="text" />
             </div>
 
-            <div>
+            <div class="form-control">
                 <h3>Importe</h3>
-                <input id="importe-transaccion" type="number"
-                    placeholder="introduzca importe, si es gasto, coloque un - adelante" />
+                <label class="label-control">Introduzca importe, si es gasto, coloque un - adelante</label>
+                <input class="input-transacion" id="importe-transaccion" type="number" placeholder="Importe" />
             </div>
 
-            <div>
+            <div class="boton-transaccion">
                 <button class="agregar-transaccion" onclick="nuevaTransaccion()">Añadir nueva transaccion</button>
             </div>
+        </div>
+
+        <div class="historial">
+            <h2>Historial</h2>
+            <div id="historial" />
         </div>
 
 

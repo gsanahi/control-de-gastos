@@ -59,7 +59,12 @@ function agregarElementoTransaccion(transaccion){
     const elementoImporte = document.createElement('div'); // <div></div>
     elementoImporte.className = "importe";
     elementoImporte.innerText = "€ " + transaccion.importe; // <div>214</div>
-    elementoTransaccion.appendChild(elementoImporte); // <div><div>214</div></div>
+    if(transaccion.importe >= 0){
+        elementoImporte.className += " positivo";
+    } else {
+        elementoImporte.className += " negativo";
+    }
+    elementoTransaccion.appendChild(elementoImporte); 
 
     const elementoConcepto = document.createElement('div'); // <div></div>
     elementoConcepto.className ="concepto";
@@ -75,6 +80,8 @@ function agregarElementoTransaccion(transaccion){
     elementoTransaccion.appendChild(elementoAcciones); // <div><div>214</div><div>Cine</div><div></div></div>
 
     document.getElementById("historial").appendChild(elementoTransaccion);
+
+
 }
 
 function guardarTransacciones() {
@@ -93,6 +100,7 @@ function cargarTransacciones() {
     if (idSerializado) {
         id = Number(idSerializado);
     }
+    actualizarControlGastos();
 }
 
 cargarTransacciones();
