@@ -14,18 +14,18 @@
         <h1 class="center"> Vamos a controlar tus gastos! </h1>
 
         <div>
-            <div class="ahorro">
+            <div id="contenedor-ahorro">
                 <div class="control">
                     <div>Tu ahorro</div>
                     <div>€ <span id="ahorro">0</span></div>
                 </div>
             </div>
             <div class="ingresos-egresos">
-                <div class="control">
+                <div class="control positivo">
                     <div>Ingresos</div>
                     <div>€ <span id="ingresos">0</span></div>
                 </div>
-                <div class="control">
+                <div class="control negativo">
                     <div>Egresos</div>
                     <div>€ <span id="egresos">0</span></div>
                 </div>
@@ -44,8 +44,8 @@
 
             <div class="form-control">
                 <h3>Importe</h3>
-                <label class="label-control">Introduzca importe, si es gasto, coloque un - adelante</label>
-                <input class="input-transacion" id="importe-transaccion" type="number" placeholder="Importe" />
+                <label class="label-control">Introduzca importe, si es gasto, coloque un número negativo</label>
+                <input class="input-transacion" id="importe-transaccion" type="number" placeholder="0.0" />
             </div>
 
             <div class="boton-transaccion">

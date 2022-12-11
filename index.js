@@ -2,8 +2,10 @@ let transacciones = [];
 let id = 1;
 
 function nuevaTransaccion() {
-    const concepto = document.getElementById("concepto-transaccion").value;
-    const importe = Number(document.getElementById("importe-transaccion").value);
+    const elementoConcepto = document.getElementById("concepto-transaccion")
+    const concepto = elementoConcepto.value;
+    const elementoImporte = document.getElementById("importe-transaccion")
+    const importe = Number(elementoImporte.value);
 
     // Valido que los datos sean correctos
     if (!concepto || !importe) {
@@ -17,7 +19,10 @@ function nuevaTransaccion() {
     agregarElementoTransaccion(transaccion);
     
     actualizarControlGastos();
-    guardarTransacciones()
+    guardarTransacciones();
+
+    elementoConcepto.value = "";
+    elementoImporte.value = "";
 }
 
 function eliminarTransaccion(id) {
@@ -44,6 +49,11 @@ function actualizarControlGastos() {
     document.getElementById("ingresos").innerText = ingresos;
     document.getElementById("egresos").innerText = egresos;
     document.getElementById("ahorro").innerText = ahorro;
+    if(ahorro >= 0) {
+        document.getElementById("contenedor-ahorro").className = " positivo";
+    } else{
+        document.getElementById("contenedor-ahorro").className = " negativo";
+    }
 }
 
 function agregarElementoTransaccion(transaccion){
